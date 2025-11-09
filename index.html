@@ -28,7 +28,18 @@
     .risk-bar{height:100%;transition:width 0.5s;}
     .risk-text{margin-top:8px;font-size:13px;color:var(--muted)}
     .flag-btn{width:32px;height:20px;cursor:pointer; border:1px solid #ccc; border-radius:4px;}
-    @media (max-width:700px){form{grid-template-columns:1fr}}
+
+    /* Mobile-friendly improvements */
+    @media (max-width:700px){
+      form{grid-template-columns:1fr; gap:20px;}
+      form > div{margin-bottom:16px;}
+      input[type='number'], select{padding:14px; font-size:17px;}
+      button{padding:14px 18px; font-size:17px;}
+      .flex{flex-direction:column; gap:10px; align-items:flex-start;}
+      .pill{font-size:17px; padding:8px 14px;}
+      .risk-bar-container{height:24px;}
+      .risk-text{font-size:15px;}
+    }
   </style>
 </head>
 <body>
@@ -258,7 +269,7 @@
       document.getElementById('riskText').textContent = '';
     });
 
-    // Init page in Dutch
+    // Initialize page in Dutch
     translatePage('nl');
   </script>
 </body>
